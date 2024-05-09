@@ -1,0 +1,20 @@
+body {
+    background: linear-gradient(45deg, #e6e9f0, #eef1f5);
+    font-family: 'Raleway', sans-serif;
+}
+
+$maxWidth: 1920;
+@mixin adaptive-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+.wrapper {
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+@import 'header.scss';
+@import 'account.scss';

@@ -1,0 +1,41 @@
+.account {
+    .wrapper {
+        .account__menu {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            background: rgb(255, 251, 229);
+            gap: 20px;
+            .account__menu-block {
+                color: rgb(0, 0, 0);
+                text-align: center;
+                transition: .2s all ease;
+                &:hover {
+                    background: rgb(253, 244, 192);
+                    cursor: pointer;
+                    transform:scale(.99);
+                }
+                h3 { 
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid grey; 
+                }
+                .account__card {
+                    padding: 0 20px;
+                }
+            }
+        }
+        .account__content {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            padding: 50px;
+            background: rgb(255, 251, 229);
+            img {
+                width: 150px;
+                height: 150px;
+            }
+            form {
+                margin-left: 15px;
+            }
+        }
+    }
+}
